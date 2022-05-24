@@ -21,7 +21,8 @@ class CleanDataFrame:
         Takes in the sales dataframe an casts columns to proper data type
         """
         datetime_columns = ['Date']
-        string_columns = ['PromoInterval','StoreType','Assortment']
+        string_columns = ['PromoInterval','StoreType','Assortment','StateHoliday']
+        int_columns=['CompetitionOpenSinceYear','CompetitionOpenSinceMonth','Promo2SinceWeek','Promo2SinceYear']
         df_columns = df.columns
         for col in string_columns:
             if col in df_columns:
@@ -29,6 +30,9 @@ class CleanDataFrame:
         for col in datetime_columns:
             if col in df_columns:
                 df[col] = pd.to_datetime(df[col])
+        for col in int_columns:
+            if col in df_columns:
+                df[col] = df[col].astype("int64")
         if column and to_type:
             df[column] = df[column].astype(to_type)
 
@@ -76,6 +80,10 @@ class CleanDataFrame:
         for column in columns:
             df[column] = df[column].fillna(value)
         return df
+    def replace_value(self,df:pd.DataFrame, column , val_before,val_to):
+        
+            df.loc[df[column] == val_before, column] = val_to
+            return df
 
 
     def remove_null_row(self, df: pd.DataFrame, columns: str) -> pd.DataFrame:
@@ -116,7 +124,7 @@ class CleanDataFrame:
         This checkes if there are any duplicated entries for a user
         And remove the duplicated rows
         """
-        if subset == None:
+        if subset != None:
             df = df.drop_duplicates(subset='')
         else:
              df = df.drop_duplicates()
@@ -135,7 +143,7 @@ class CleanDataFrame:
         This runs a series of cleaner methods on the df passed to it. 
         """
         df = self.drop_duplicates(df)
-        df = self.drop_columns(df)
+        # df = self.drop_columns(df)
         df.reset_index(drop=True, inplace=True)
 
         return df
