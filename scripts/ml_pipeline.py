@@ -229,3 +229,4 @@ def run_train_pipeline(model, x, y, experiment_name, run_name):
 
     train_pipeline.fit(X_train, y_train)
     return train_pipeline.log_model('model', X_test, y_test, experiment_name, run_name, run_params=run_params)
+    

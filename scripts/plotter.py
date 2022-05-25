@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from logger import logger
 
 
 class Plotter:
@@ -12,12 +13,14 @@ class Plotter:
                     kde=True, height=7, aspect=2)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
+        logger.info(f'successfully displayed histogram plot')
 
     def plot_count(self, df: pd.DataFrame, column: str) -> None:
         plt.figure(figsize=(12, 7))
         sns.countplot(data=df, x=column)
         plt.title(f'Distribution of {column}', size=20, fontweight='bold')
         plt.show()
+        logger.info(f'successfully displayed count plot')
 
     def plot_bar(self, df: pd.DataFrame, x_col: str, y_col: str, title: str, xlabel: str, ylabel: str) -> None:
         plt.figure(figsize=(12, 7))
@@ -28,6 +31,7 @@ class Plotter:
         plt.xlabel(xlabel, fontsize=16)
         plt.ylabel(ylabel, fontsize=16)
         plt.show()
+        logger.info(f'successfully displayed bar plot')
 
     def plot_heatmap(self, df: pd.DataFrame, title: str, cbar=False) -> None:
         plt.figure(figsize=(12, 7))
@@ -35,6 +39,7 @@ class Plotter:
                     vmax=1, fmt='.2f', linewidths=.7, cbar=cbar)
         plt.title(title, size=18, fontweight='bold')
         plt.show()
+        logger.info(f'successfully displayed heatmap plot')
 
     def plot_box(self, df: pd.DataFrame, x_col: str, title: str) -> None:
         plt.figure(figsize=(12, 7))
@@ -42,6 +47,7 @@ class Plotter:
         plt.title(title, size=20)
         plt.xticks(rotation=75, fontsize=14)
         plt.show()
+        logger.info(f'successfully displayed box plot')
 
     def plot_box_multi(self, df: pd.DataFrame, x_col: str, y_col: str, title: str) -> None:
         plt.figure(figsize=(12, 7))
@@ -50,6 +56,7 @@ class Plotter:
         plt.xticks(rotation=75, fontsize=14)
         plt.yticks(fontsize=14)
         plt.show()
+        logger.info(f'successfully displayed box multi plot')
 
     def plot_scatter(self, df: pd.DataFrame, x_col: str, y_col: str, title: str,) -> None:
         plt.figure(figsize=(12, 7))
@@ -58,3 +65,4 @@ class Plotter:
         plt.xticks(fontsize=14)
         plt.yticks(fontsize=14)
         plt.show()
+        logger.info(f'successfully displayed scatter plot')
