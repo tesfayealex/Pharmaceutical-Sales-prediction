@@ -128,3 +128,96 @@ Sales                0.010405  1.000000   0.838040            -0.044981
 Customers            0.035162  0.838040   1.000000            -0.145296
 CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
 2022-05-25 17:58:27,981:logger:successfully displayed heatmap plot
+2022-05-25 20:35:06,439:logger:The dataset contains 21.01 % missing values.
+2022-05-25 20:35:09,194:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-25 20:35:09,203:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-25 20:35:09,208:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-25 20:35:09,251:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-25 20:35:09,282:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-25 20:35:09,574:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-25 20:35:09,577:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-25 20:35:09,580:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-25 20:35:09,583:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-25 20:35:09,688:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-25 20:35:10,316:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-25 20:35:10,811:logger:successfully changed PromoInterval column to string
+2022-05-25 20:35:10,821:logger:successfully changed StoreType column to string
+2022-05-25 20:35:10,827:logger:successfully changed Assortment column to string
+2022-05-25 20:35:10,835:logger:successfully changed StateHoliday column to string
+2022-05-25 20:35:10,841:logger:successfully changed Date column to datetime
+2022-05-25 20:35:10,843:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 20:35:10,847:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 20:35:10,850:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 20:35:10,853:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 20:35:10,855:logger:successfully finished fixing datatype
+2022-05-25 20:35:11,539:logger:successfully droped duplicates
+2022-05-25 20:35:25,740:logger:The dataset contains 0.0 % missing values.
+2022-05-25 20:35:26,784:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-25 20:35:30,671:logger:successfully replaced value of StateHoliday column with 0
+2022-05-25 20:35:30,755:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-25 20:35:31,017:logger:successfully changed PromoInterval column to string
+2022-05-25 20:35:31,020:logger:successfully changed StoreType column to string
+2022-05-25 20:35:31,021:logger:successfully changed Assortment column to string
+2022-05-25 20:35:31,083:logger:successfully changed StateHoliday column to string
+2022-05-25 20:35:34,454:logger:successfully changed Date column to datetime
+2022-05-25 20:35:34,460:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 20:35:34,461:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 20:35:34,464:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 20:35:34,467:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 20:35:34,471:logger:successfully finished fixing datatype
+2022-05-25 20:35:35,358:logger:successfully droped duplicates
+2022-05-25 20:35:37,876:logger:The dataset contains 0.0 % missing values.
+2022-05-25 20:35:38,262:logger:successfully changed PromoInterval column to string
+2022-05-25 20:35:38,263:logger:successfully changed StoreType column to string
+2022-05-25 20:35:38,265:logger:successfully changed Assortment column to string
+2022-05-25 20:35:38,273:logger:successfully changed StateHoliday column to string
+2022-05-25 20:35:38,282:logger:successfully changed Date column to datetime
+2022-05-25 20:35:38,284:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 20:35:38,286:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 20:35:38,288:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 20:35:38,290:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 20:35:38,291:logger:successfully finished fixing datatype
+2022-05-25 20:35:38,631:logger:successfully droped duplicates
+2022-05-25 20:36:36,885:logger:successfully displayed histogram plot
+2022-05-25 20:37:00,898:logger:successfully displayed histogram plot
+2022-05-25 20:37:04,459:logger:successfully displayed bar plot
+2022-05-25 20:37:07,144:logger:0    986159
+a     20260
+b      6690
+c      4100
+Name: StateHoliday, dtype: Int64
+2022-05-25 20:37:19,996:logger:successfully displayed heatmap plot
+2022-05-25 20:37:20,439:logger:0    24824
+1    16264
+Name: Promo, dtype: int64
+2022-05-25 20:37:20,464:logger:0    629129
+1    388080
+Name: Promo, dtype: int64
+2022-05-25 20:37:24,807:logger:              Sales  Customers
+Sales      1.000000   0.894711
+Customers  0.894711   1.000000
+2022-05-25 20:37:27,261:logger:successfully displayed heatmap plot
+2022-05-25 20:37:30,664:logger:              Promo  Customers
+Promo      1.000000   0.316169
+Customers  0.316169   1.000000
+2022-05-25 20:37:30,860:logger:successfully displayed heatmap plot
+2022-05-25 20:38:08,904:logger:                        Store     Sales  Customers  CompetitionDistance
+Store                1.000000  0.010405   0.035162            -0.021815
+Sales                0.010405  1.000000   0.838040            -0.044981
+Customers            0.035162  0.838040   1.000000            -0.145296
+CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
+2022-05-25 20:38:09,358:logger:successfully displayed heatmap plot
+2022-05-25 20:42:11,405:logger:successfully got catagorical columns
+2022-05-25 20:42:13,269:logger:successfully got catagorical columns
+2022-05-25 20:42:13,271:logger:successfully got numerical columns
+2022-05-25 20:54:41,422:logger:successfully got catagorical columns
+2022-05-25 20:54:42,721:logger:successfully got catagorical columns
+2022-05-25 20:54:42,723:logger:successfully got numerical columns
+2022-05-25 21:30:46,759:logger:successfully got catagorical columns
+2022-05-25 21:30:54,834:logger:successfully got catagorical columns
+2022-05-25 21:30:54,846:logger:successfully got numerical columns
+2022-05-25 21:38:39,981:logger:successfully got catagorical columns
+2022-05-25 21:38:40,223:logger:successfully got catagorical columns
+2022-05-25 21:38:41,748:logger:successfully got numerical columns
