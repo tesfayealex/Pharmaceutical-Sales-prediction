@@ -221,3 +221,289 @@ CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
 2022-05-25 21:38:39,981:logger:successfully got catagorical columns
 2022-05-25 21:38:40,223:logger:successfully got catagorical columns
 2022-05-25 21:38:41,748:logger:successfully got numerical columns
+2022-05-25 22:37:48,186:logger:The dataset contains 21.01 % missing values.
+2022-05-25 22:37:48,631:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-25 22:37:48,635:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-25 22:37:48,642:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-25 22:37:48,646:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-25 22:37:48,648:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-25 22:37:49,173:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-25 22:37:49,175:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-25 22:37:49,178:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-25 22:37:49,183:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-25 22:37:49,187:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-25 22:37:49,518:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-25 22:37:50,206:logger:successfully changed PromoInterval column to string
+2022-05-25 22:37:50,209:logger:successfully changed StoreType column to string
+2022-05-25 22:37:50,212:logger:successfully changed Assortment column to string
+2022-05-25 22:37:50,214:logger:successfully changed StateHoliday column to string
+2022-05-25 22:37:50,216:logger:successfully changed Date column to datetime
+2022-05-25 22:37:50,221:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 22:37:50,225:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 22:37:50,228:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 22:37:50,231:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 22:37:50,232:logger:successfully finished fixing datatype
+2022-05-25 22:37:51,694:logger:successfully droped duplicates
+2022-05-25 22:38:19,124:logger:The dataset contains 0.0 % missing values.
+2022-05-25 22:38:21,462:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-25 22:38:21,953:logger:successfully replaced value of StateHoliday column with 0
+2022-05-25 22:38:22,001:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-25 22:38:22,213:logger:successfully changed PromoInterval column to string
+2022-05-25 22:38:22,214:logger:successfully changed StoreType column to string
+2022-05-25 22:38:22,215:logger:successfully changed Assortment column to string
+2022-05-25 22:38:22,274:logger:successfully changed StateHoliday column to string
+2022-05-25 22:38:23,011:logger:successfully changed Date column to datetime
+2022-05-25 22:38:23,012:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 22:38:23,013:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 22:38:23,014:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 22:38:23,017:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 22:38:23,019:logger:successfully finished fixing datatype
+2022-05-25 22:38:24,131:logger:successfully droped duplicates
+2022-05-25 22:38:26,059:logger:The dataset contains 0.0 % missing values.
+2022-05-25 22:38:26,800:logger:successfully changed PromoInterval column to string
+2022-05-25 22:38:26,803:logger:successfully changed StoreType column to string
+2022-05-25 22:38:26,807:logger:successfully changed Assortment column to string
+2022-05-25 22:38:26,813:logger:successfully changed StateHoliday column to string
+2022-05-25 22:38:26,830:logger:successfully changed Date column to datetime
+2022-05-25 22:38:26,831:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-25 22:38:26,835:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-25 22:38:26,839:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-25 22:38:26,842:logger:successfully changed Promo2SinceYear column to integer
+2022-05-25 22:38:26,843:logger:successfully finished fixing datatype
+2022-05-25 22:38:27,182:logger:successfully droped duplicates
+2022-05-25 22:39:20,981:logger:successfully displayed histogram plot
+2022-05-25 22:39:44,439:logger:successfully displayed histogram plot
+2022-05-25 22:39:50,929:logger:successfully displayed bar plot
+2022-05-25 22:39:53,626:logger:0    986159
+a     20260
+b      6690
+c      4100
+Name: StateHoliday, dtype: Int64
+2022-05-25 22:40:04,586:logger:successfully displayed heatmap plot
+2022-05-25 22:46:39,979:logger:promo usage for the train data is 38.151451668241236
+2022-05-25 22:46:39,981:logger:promo usage for the test data is 39.583333333333336
+2022-05-25 22:46:58,783:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-25 22:46:58,786:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-25 23:03:12,225:logger:              Sales  Customers
+Sales      1.000000   0.894711
+Customers  0.894711   1.000000
+2022-05-25 23:03:12,573:logger:successfully displayed heatmap plot
+2022-05-25 23:03:34,521:logger: increase on all store with average is 62.184235408598724
+2022-05-25 23:14:00,118:logger:                        Store     Sales  Customers  CompetitionDistance
+Store                1.000000  0.010405   0.035162            -0.021815
+Sales                0.010405  1.000000   0.838040            -0.044981
+Customers            0.035162  0.838040   1.000000            -0.145296
+CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
+2022-05-25 23:14:01,079:logger:successfully displayed heatmap plot
+2022-05-26 09:56:02,837:logger:The dataset contains 21.01 % missing values.
+2022-05-26 09:56:04,901:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-26 09:56:04,934:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-26 09:56:04,985:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-26 09:56:05,003:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-26 09:56:05,020:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-26 09:56:05,990:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-26 09:56:05,993:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-26 09:56:06,001:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-26 09:56:06,014:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-26 09:56:06,049:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-26 09:56:06,535:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-26 09:56:07,204:logger:successfully changed PromoInterval column to string
+2022-05-26 09:56:07,207:logger:successfully changed StoreType column to string
+2022-05-26 09:56:07,233:logger:successfully changed Assortment column to string
+2022-05-26 09:56:07,234:logger:successfully changed StateHoliday column to string
+2022-05-26 09:56:07,236:logger:successfully changed Date column to datetime
+2022-05-26 09:56:07,248:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-26 09:56:07,251:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-26 09:56:07,255:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-26 09:56:07,260:logger:successfully changed Promo2SinceYear column to integer
+2022-05-26 09:56:07,267:logger:successfully finished fixing datatype
+2022-05-26 09:56:08,406:logger:successfully droped duplicates
+2022-05-26 09:56:20,539:logger:The dataset contains 0.0 % missing values.
+2022-05-26 09:56:21,732:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-26 09:56:23,024:logger:successfully replaced value of StateHoliday column with 0
+2022-05-26 09:56:23,094:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-26 09:56:23,222:logger:successfully changed PromoInterval column to string
+2022-05-26 09:56:23,224:logger:successfully changed StoreType column to string
+2022-05-26 09:56:23,225:logger:successfully changed Assortment column to string
+2022-05-26 09:56:23,301:logger:successfully changed StateHoliday column to string
+2022-05-26 09:56:24,532:logger:successfully changed Date column to datetime
+2022-05-26 09:56:24,533:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-26 09:56:24,535:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-26 09:56:24,536:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-26 09:56:24,538:logger:successfully changed Promo2SinceYear column to integer
+2022-05-26 09:56:24,541:logger:successfully finished fixing datatype
+2022-05-26 09:56:25,779:logger:successfully droped duplicates
+2022-05-26 09:56:28,735:logger:The dataset contains 0.0 % missing values.
+2022-05-26 09:56:30,233:logger:successfully changed PromoInterval column to string
+2022-05-26 09:56:30,234:logger:successfully changed StoreType column to string
+2022-05-26 09:56:30,237:logger:successfully changed Assortment column to string
+2022-05-26 09:56:30,244:logger:successfully changed StateHoliday column to string
+2022-05-26 09:56:30,469:logger:successfully changed Date column to datetime
+2022-05-26 09:56:30,475:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-26 09:56:30,477:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-26 09:56:30,479:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-26 09:56:30,480:logger:successfully changed Promo2SinceYear column to integer
+2022-05-26 09:56:30,482:logger:successfully finished fixing datatype
+2022-05-26 09:56:31,380:logger:successfully droped duplicates
+2022-05-26 09:57:24,540:logger:successfully displayed histogram plot
+2022-05-26 09:57:42,009:logger:successfully displayed histogram plot
+2022-05-26 09:57:48,108:logger:successfully displayed bar plot
+2022-05-26 09:57:51,224:logger:0    986159
+a     20260
+b      6690
+c      4100
+Name: StateHoliday, dtype: Int64
+2022-05-26 09:58:25,768:logger:successfully displayed heatmap plot
+2022-05-26 09:58:27,258:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-26 09:58:27,260:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-26 09:58:34,328:logger:              Sales  Customers
+Sales      1.000000   0.894711
+Customers  0.894711   1.000000
+2022-05-26 09:58:34,669:logger:successfully displayed heatmap plot
+2022-05-26 09:58:36,428:logger: increase on all store with average is 62.184235408598724
+2022-05-26 09:58:38,126:logger:              Promo  Customers
+Promo      1.000000   0.316169
+Customers  0.316169   1.000000
+2022-05-26 09:58:38,429:logger:successfully displayed heatmap plot
+2022-05-26 10:00:41,864:logger:                        Store     Sales  Customers  CompetitionDistance
+Store                1.000000  0.010405   0.035162            -0.021815
+Sales                0.010405  1.000000   0.838040            -0.044981
+Customers            0.035162  0.838040   1.000000            -0.145296
+CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
+2022-05-26 10:00:45,235:logger:successfully displayed heatmap plot
+2022-05-26 10:39:23,158:logger:successfully got numerical columns
+2022-05-26 10:39:23,158:logger:successfully got numerical columns
+2022-05-26 10:40:28,476:logger:successfully got numerical columns
+2022-05-26 10:40:28,476:logger:successfully got numerical columns
+2022-05-26 10:40:28,481:logger:successfully got numerical columns
+2022-05-26 10:40:28,482:logger:successfully got numerical columns
+2022-05-26 10:41:07,964:logger:successfully got catagorical columns
+2022-05-26 10:41:07,974:logger:successfully got numerical columns
+2022-05-26 12:31:27,806:logger:successfully got catagorical columns
+2022-05-26 12:31:27,806:logger:successfully got numerical columns
+2022-05-26 12:31:27,826:logger:successfully got catagorical columns
+2022-05-26 12:39:54,136:logger:successfully got catagorical columns
+2022-05-26 12:39:54,153:logger:successfully got numerical columns
+2022-05-26 12:39:54,343:logger:The dataset contains 12.5 % missing values.
+2022-05-26 12:40:34,585:logger:successfully got catagorical columns
+2022-05-26 12:40:34,602:logger:successfully got numerical columns
+2022-05-26 12:40:34,605:logger:The dataset contains 12.5 % missing values.
+2022-05-26 12:43:18,303:logger:successfully fixed missing values of 3 column with 4
+2022-05-26 12:43:20,566:logger:successfully got catagorical columns
+2022-05-26 12:43:20,570:logger:successfully got numerical columns
+2022-05-26 12:43:20,583:logger:The dataset contains 12.5 % missing values.
+2022-05-26 12:44:14,106:logger:successfully fixed missing values of 3 column with 4
+2022-05-26 12:44:14,123:logger:successfully got catagorical columns
+2022-05-26 12:44:14,125:logger:successfully got numerical columns
+2022-05-26 12:44:14,129:logger:The dataset contains 12.5 % missing values.
+2022-05-26 12:45:21,942:logger:successfully fixed missing values of 3 column with 4
+2022-05-26 12:45:21,958:logger:successfully got catagorical columns
+2022-05-26 12:45:21,962:logger:successfully got numerical columns
+2022-05-26 12:46:23,786:logger:successfully fixed missing values of 3 column with 4
+2022-05-26 12:46:23,796:logger:successfully got catagorical columns
+2022-05-26 12:46:23,798:logger:successfully got numerical columns
+2022-05-26 12:48:44,083:logger:'3'
+2022-05-26 12:48:44,122:logger:successfully got catagorical columns
+2022-05-26 12:48:44,123:logger:successfully got numerical columns
+2022-05-26 12:49:21,633:logger:'first'
+2022-05-26 12:49:21,687:logger:successfully got catagorical columns
+2022-05-26 12:49:21,696:logger:successfully got numerical columns
+2022-05-26 12:49:41,368:logger:successfully got catagorical columns
+2022-05-26 12:50:00,845:logger:successfully got catagorical columns
+2022-05-26 12:50:00,847:logger:successfully got numerical columns
+2022-05-26 12:52:07,330:logger:could not allocate 1347289088 bytes
+2022-05-26 12:53:07,789:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:03:24,944:logger:successfully got catagorical columns
+2022-05-26 13:03:24,949:logger:successfully got catagorical columns
+2022-05-26 13:03:25,900:logger:successfully got numerical columns
+2022-05-26 13:05:34,203:logger:could not allocate 5389156352 bytes
+2022-05-26 13:05:50,817:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:12:55,673:logger:successfully got catagorical columns
+2022-05-26 13:12:55,832:logger:successfully got catagorical columns
+2022-05-26 13:12:57,248:logger:successfully got numerical columns
+2022-05-26 13:13:13,822:logger:could not allocate 2694578176 bytes
+2022-05-26 13:13:14,100:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:13:59,434:logger:successfully got catagorical columns
+2022-05-26 13:13:59,437:logger:successfully got catagorical columns
+2022-05-26 13:13:59,595:logger:successfully got numerical columns
+2022-05-26 13:16:51,907:logger:could not allocate 168411136 bytes
+2022-05-26 13:17:00,474:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:24:31,409:logger:successfully got catagorical columns
+2022-05-26 13:24:41,815:logger:successfully got catagorical columns
+2022-05-26 13:24:41,817:logger:successfully got numerical columns
+2022-05-26 13:34:24,446:logger:Unable to allocate 46.7 GiB for an array with shape (305163, 20558) and data type float64
+2022-05-26 13:42:56,577:logger:successfully got catagorical columns
+2022-05-26 13:42:58,697:logger:successfully got catagorical columns
+2022-05-26 13:42:58,699:logger:successfully got numerical columns
+2022-05-26 13:53:43,546:logger:successfully got catagorical columns
+2022-05-26 13:53:51,820:logger:successfully got catagorical columns
+2022-05-26 13:53:51,822:logger:successfully got numerical columns
+2022-05-26 13:55:44,255:logger:Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2022-05-26 13:57:39,460:logger:plotted prediction vs true labels
+2022-05-26 15:16:57,027:logger:successfully got catagorical columns
+2022-05-26 15:17:03,439:logger:successfully got catagorical columns
+2022-05-26 15:17:03,442:logger:successfully got numerical columns
+2022-05-26 15:17:09,698:logger:Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2022-05-26 15:17:19,535:logger:plotted prediction vs true labels
+2022-05-26 15:25:39,415:logger:successfully got catagorical columns
+2022-05-26 15:25:40,814:logger:successfully got catagorical columns
+2022-05-26 15:25:40,815:logger:successfully got numerical columns
+2022-05-26 15:25:42,372:logger:name 'run_metrics' is not defined
+2022-05-26 15:45:42,773:logger:successfully got catagorical columns
+2022-05-26 15:45:43,886:logger:successfully got catagorical columns
+2022-05-26 15:45:43,888:logger:successfully got numerical columns
+2022-05-26 15:47:42,122:logger:successfully got catagorical columns
+2022-05-26 15:47:43,364:logger:successfully got catagorical columns
+2022-05-26 15:47:43,368:logger:successfully got numerical columns
+2022-05-26 15:49:22,597:logger:successfully got catagorical columns
+2022-05-26 15:49:25,035:logger:successfully got catagorical columns
+2022-05-26 15:49:25,039:logger:successfully got numerical columns
+2022-05-26 15:49:33,675:logger:plotted prediction vs true labels
+2022-05-26 15:50:11,436:logger:successfully got catagorical columns
+2022-05-26 15:50:11,438:logger:successfully got catagorical columns
+2022-05-26 15:50:11,440:logger:successfully got numerical columns
+2022-05-26 15:50:18,169:logger:plotted prediction vs true labels
+2022-05-26 15:51:19,205:logger:successfully got catagorical columns
+2022-05-26 15:51:19,255:logger:successfully got catagorical columns
+2022-05-26 15:51:19,257:logger:successfully got numerical columns
+2022-05-26 17:14:30,889:logger:'first'
+2022-05-26 17:14:31,749:logger:successfully got catagorical columns
+2022-05-26 17:14:31,753:logger:successfully got numerical columns
+2022-05-26 21:47:11,928:logger:successfully got catagorical columns
+2022-05-26 21:47:13,238:logger:successfully got catagorical columns
+2022-05-26 21:47:13,240:logger:successfully got numerical columns
+2022-05-26 21:48:40,738:logger:successfully got catagorical columns
+2022-05-26 21:48:42,174:logger:successfully got catagorical columns
+2022-05-26 21:48:42,175:logger:successfully got numerical columns
+2022-05-26 21:50:15,137:logger:calculate_metrics() takes 2 positional arguments but 3 were given
+2022-05-26 21:51:40,546:logger:successfully got catagorical columns
+2022-05-26 21:51:42,047:logger:successfully got catagorical columns
+2022-05-26 21:51:42,049:logger:successfully got numerical columns
+2022-05-26 21:59:23,445:logger:successfully got catagorical columns
+2022-05-26 21:59:25,472:logger:successfully got catagorical columns
+2022-05-26 21:59:25,474:logger:successfully got numerical columns
+2022-05-26 22:09:19,733:logger:successfully got catagorical columns
+2022-05-26 22:09:21,136:logger:successfully got catagorical columns
+2022-05-26 22:09:21,138:logger:successfully got numerical columns
+2022-05-26 22:10:53,208:logger:accuracy_metric() takes 2 positional arguments but 3 were given
+2022-05-26 22:19:43,099:logger:successfully got catagorical columns
+2022-05-26 22:19:44,726:logger:successfully got catagorical columns
+2022-05-26 22:19:44,728:logger:successfully got numerical columns
+2022-05-26 22:21:34,494:logger:successfully got catagorical columns
+2022-05-26 22:21:34,496:logger:successfully got catagorical columns
+2022-05-26 22:21:34,498:logger:successfully got numerical columns
+2022-05-26 22:28:07,555:logger:successfully got catagorical columns
+2022-05-26 22:28:12,074:logger:successfully got catagorical columns
+2022-05-26 22:28:12,111:logger:successfully got numerical columns
+2022-05-26 22:33:40,266:logger:successfully got catagorical columns
+2022-05-26 22:33:44,428:logger:successfully got catagorical columns
+2022-05-26 22:33:44,431:logger:successfully got numerical columns
+2022-05-26 22:39:28,340:logger:successfully got catagorical columns
+2022-05-26 22:39:28,342:logger:successfully got catagorical columns
+2022-05-26 22:39:28,346:logger:successfully got numerical columns
+2022-05-26 22:39:39,442:logger:Parameter value is not iterable or distribution (key='n_estimators', value=10)
+2022-05-26 22:39:39,463:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'

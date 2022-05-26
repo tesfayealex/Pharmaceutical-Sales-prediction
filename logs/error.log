@@ -1,0 +1,19 @@
+2022-05-26 12:48:44,083:logger:'3'
+2022-05-26 12:49:21,633:logger:'first'
+2022-05-26 12:52:07,330:logger:could not allocate 1347289088 bytes
+2022-05-26 12:53:07,789:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:05:34,203:logger:could not allocate 5389156352 bytes
+2022-05-26 13:05:50,817:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:13:13,822:logger:could not allocate 2694578176 bytes
+2022-05-26 13:13:14,100:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:16:51,907:logger:could not allocate 168411136 bytes
+2022-05-26 13:17:00,474:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-26 13:34:24,446:logger:Unable to allocate 46.7 GiB for an array with shape (305163, 20558) and data type float64
+2022-05-26 13:55:44,255:logger:Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2022-05-26 15:17:09,698:logger:Target is multiclass but average='binary'. Please choose another average setting, one of [None, 'micro', 'macro', 'weighted'].
+2022-05-26 15:25:42,372:logger:name 'run_metrics' is not defined
+2022-05-26 17:14:30,889:logger:'first'
+2022-05-26 21:50:15,137:logger:calculate_metrics() takes 2 positional arguments but 3 were given
+2022-05-26 22:10:53,208:logger:accuracy_metric() takes 2 positional arguments but 3 were given
+2022-05-26 22:39:39,442:logger:Parameter value is not iterable or distribution (key='n_estimators', value=10)
+2022-05-26 22:39:39,463:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
