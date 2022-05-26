@@ -9,13 +9,13 @@ class CleanDataFrame:
     @staticmethod
     def get_numerical_columns(df: pd.DataFrame) -> list:
         try:
-            numerical_columns = df.select_dtypes(include='number').columns.tolist()
+            numerical_columns = df.select_dtypes(
+                include='number').columns.tolist()
             logger.info('successfully got numerical columns')
             return numerical_columns
         except Exception as e:
             logger.error(e)
             return []
-        
 
     @staticmethod
     def get_categorical_columns(df: pd.DataFrame) -> list:
@@ -27,7 +27,6 @@ class CleanDataFrame:
         except Exception as e:
             logger.error(e)
             return []
-       
 
     def fix_datatypes(self, df: pd.DataFrame, column: str = None, to_type: type = None) -> pd.DataFrame:
         """
@@ -36,9 +35,9 @@ class CleanDataFrame:
         try:
             datetime_columns = ['Date']
             string_columns = ['PromoInterval',
-                            'StoreType', 'Assortment', 'StateHoliday']
+                              'StoreType', 'Assortment', 'StateHoliday']
             int_columns = ['CompetitionOpenSinceYear',
-                        'CompetitionOpenSinceMonth', 'Promo2SinceWeek', 'Promo2SinceYear']
+                           'CompetitionOpenSinceMonth', 'Promo2SinceWeek', 'Promo2SinceYear']
             df_columns = df.columns
             for col in string_columns:
                 if col in df_columns:
@@ -77,6 +76,7 @@ class CleanDataFrame:
             # Calculate percentage of missing values
             logger.info(
                 f"The dataset contains {round(((totalMissing/totalCells) * 100), 2)} % missing values.")
+            return  round(((totalMissing/totalCells) * 100), 2)
         except Exception as e:
             logger.error(e)
 
@@ -94,7 +94,7 @@ class CleanDataFrame:
                 return series.mode()[0]
         except Exception as e:
             logger.error(e)
-             
+
     def replace_missing(self, df: pd.DataFrame, columns: str, method: str) -> pd.DataFrame:
         try:
             for column in columns:
@@ -107,7 +107,6 @@ class CleanDataFrame:
         except Exception as e:
             logger.error(e)
         return df
-        
 
     def fix_missing_values(self, df: pd.DataFrame, columns: list, value) -> pd.DataFrame:
         try:
@@ -149,7 +148,6 @@ class CleanDataFrame:
         except Exception as e:
             logger.error(e)
             return df
-        
 
     def minmax_scale(self, df: pd.DataFrame) -> pd.DataFrame:
         try:
