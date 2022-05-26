@@ -25,8 +25,3 @@ First we will perform EDA, and we move on to Machine Learning algorithms to find
 4. use the `Notebooks/random_forest.ipynb` notebook as an example for accessing data and training a model
 5. use good names for the mlflow experiment name and run names. Experiment name should be prefixed with our names.(we can discuss this)
 
-## Contributors
-
-![Contributors list](https://contrib.rocks/image?repo=tesfayealex/Pharmaceutical-Sales-prediction)
-
-Made with [contrib.rocks](https://contrib.rocks).
