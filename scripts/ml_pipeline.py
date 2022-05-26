@@ -26,6 +26,7 @@ import numpy as np
 import seaborn as sns
 from logger import logger
 
+
 class TrainingPipeline(Pipeline):
     '''
     Class -> TrainingPipeline, ParentClass -> Sklearn-Pipeline
@@ -44,36 +45,25 @@ class TrainingPipeline(Pipeline):
             return self.__pipeline
         except Exception as e:
             logger.error(e)
-        
 
-    def get_metrics(self, y_true, y_pred, y_pred_prob):
-        try:
-            acc = accuracy_score(y_true, y_pred)
-            prec = precision_score(y_true, y_pred)
-            recall = recall_score(y_true, y_pred)
-            entropy = log_loss(y_true, y_pred_prob)
-            cm = confusion_matrix(y_true, y_pred)
-            true_pos = cm[0][0]
-            true_neg = cm[1][1]
-            false_pos = cm[0][1]
-            false_neg = cm[1][0]
+    def calculate_metrics(self, y_test, y_preds):
+        rmse = np.sqrt(mean_squared_error(y_test, y_preds))
+        r_sq = r2_score(y_test, y_preds)
+        mae = mean_absolute_error(y_test, y_preds)
 
-            return {
-                'accuracy': round(acc, 2),
-                'precision': round(prec, 2),
-                'recall': round(recall, 2),
-                'entropy': round(entropy, 2),
-                'true_pos': true_pos,
-                'true_neg': true_neg,
-                'false_pos': false_pos,
-                'false_neg': false_neg,
-            }
-        except Exception as e:
-            logger.error(e)
-            return {}
+        logger.info(f'RMSE Score: {rmse}')
+        logger.info(f'R2_Squared: {r_sq}')
+        logger.info(f'MAE Score: {mae}')
+
+    def accuracy_metric(self, y_pred, y_test):
+        errors = abs(y_pred - y_test)
+        mape = 100 * (errors / y_test)
+        # Calculate and display accuracy
+        accuracy = 100 - np.mean(mape)
+        logger.info(f'Accuracy: {round(accuracy, 2)} %.')
 
     def get_feature_importance(self, model, x):
-        try: 
+        try:
             feature_importance = None
             if str(model) == "LogisticRegression()":
                 feature_importance = model.coef_[0]
@@ -86,7 +76,6 @@ class TrainingPipeline(Pipeline):
         except Exception as e:
             logger.error(e)
             return []
-        
 
     def make_model_name(self, experiment_name, run_name):
         try:
@@ -95,21 +84,19 @@ class TrainingPipeline(Pipeline):
         except Exception as e:
             logger.error(e)
 
-
     def log_model(self, model_key, X_test, y_test, experiment_name, run_name, run_params=None):
         try:
             model = self.__pipeline.get_params()[model_key]
             y_pred = self.__pipeline.predict(X_test)
-            y_pred_prob = self.__pipeline.predict_proba(X_test)
-            run_metrics = self.get_metrics(y_test, y_pred, y_pred_prob)
-            feature_importance = self.get_feature_importance(
-                model, X_test)
-            feature_importance_plot = self.plot_feature_importance(
-                feature_importance)
-            pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
-            cm_plot = self.plot_confusion_matrix(y_test, y_pred)
-            print(run_metrics)
-            print(feature_importance)
+            run_metrics = self.__pipeline.calculate_metrics(y_test, y_pred)
+            accuracy_metrics = self.__pipeline.accuracy_metric(y_pred, y_test)
+            feature_importance = self.get_feature_importance(model, X_test)
+            # feature_importance_plot = self.plot_feature_importance(
+            #     feature_importance)
+            # pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
+            # cm_plot = self.plot_confusion_matrix(y_test, y_pred)
+            # print(run_metrics)
+            # logger.info(feature_importance)
             try:
                 mlflow.set_experiment(experiment_name)
                 mlflow.set_tracking_uri('http://localhost:5000')
@@ -121,13 +108,13 @@ class TrainingPipeline(Pipeline):
                         mlflow.log_metric(name, run_metrics[name])
 
                     mlflow.log_param("columns", X_test.columns.to_list())
-                    mlflow.log_figure(pred_plot, "predictions_plot.png")
-                    mlflow.log_figure(cm_plot, "confusion_matrix.png")
-                    mlflow.log_figure(feature_importance_plot,
-                                    "feature_importance.png")
-                    pred_plot.savefig("../images/predictions_plot.png")
-                    cm_plot.savefig("../images/confusion_matrix.png")
-                    feature_importance_plot.savefig("../images/feature_importance.png")
+                    # mlflow.log_figure(pred_plot, "predictions_plot.png")
+                    # mlflow.log_figure(cm_plot, "confusion_matrix.png")
+                    # mlflow.log_figure(feature_importance_plot,
+                    #                 "feature_importance.png")
+                    # pred_plot.savefig("../images/predictions_plot.png")
+                    # cm_plot.savefig("../images/confusion_matrix.png")
+                    # feature_importance_plot.savefig("../images/feature_importance.png")
                     mlflow.log_dict(feature_importance, "feature_importance.json")
 
                 model_name = self.make_model_name(experiment_name, run_name)
@@ -136,8 +123,8 @@ class TrainingPipeline(Pipeline):
             except Exception as e:
                 logger.error(e)
             print('Run - %s is logged to Experiment - %s' %
-                (run_name, experiment_name))
-            return run_metrics
+                  (run_name, experiment_name))
+            # return run_metrics
         except Exception as e:
             logger.error(e)
             return {}
@@ -154,7 +141,7 @@ class TrainingPipeline(Pipeline):
             title = 'True labels vs. Predicted Labels ({})'.format(model_name)
             plt.title(title, fontsize=25)
             plt.legend((original, prediction),
-                    ('Original', 'Prediction'), fontsize=20)
+                       ('Original', 'Prediction'), fontsize=20)
             plt.show()
             logger.info("plotted prediction vs true labels")
             return figure
@@ -167,7 +154,8 @@ class TrainingPipeline(Pipeline):
         try:
             figure = plt.figure(figsize=(12, 8))
             conf_matrix = confusion_matrix(actual, y_preds)
-            sns.heatmap(conf_matrix / np.sum(conf_matrix), annot=True, fmt='.2%')
+            sns.heatmap(conf_matrix / np.sum(conf_matrix),
+                        annot=True, fmt='.2%')
             plt.title('Confusion matrix', fontsize=30, fontweight='bold')
             plt.ylabel('True Label', fontsize=25)
             plt.xlabel('Predicted Label', fontsize=25)
@@ -176,7 +164,6 @@ class TrainingPipeline(Pipeline):
             return figure
         except Exception as e:
             logger.error(e)
-        
 
     def plot_feature_importance(self, feature_importance):
         try:
@@ -186,7 +173,7 @@ class TrainingPipeline(Pipeline):
             })
             fig = plt.figure(figsize=[12, 8])
             ax = sns.barplot(x=importance['features'],
-                            y=importance['importance_score'])
+                             y=importance['importance_score'])
             ax.set_title("Feature's importance")
             ax.set_xlabel("Features", fontsize=20)
             ax.set_ylabel("Importance", fontsize=20)
@@ -206,7 +193,7 @@ def label_encoder(x):
         for col in cat_cols:
             x[col] = lb.fit_transform(x[col])
     except Exception as e:
-            logger.error(e)
+        logger.error(e)
     return x
 
 
@@ -235,21 +222,21 @@ def get_pipeline(model, x):
 
         return train_pipeline
     except Exception as e:
-            logger.error(e)
+        logger.error(e)
 
 
 def dvc_get_data(path, version='72d1bf77e90769aaef56e18685215ddc98af3343'):
     try:
         repo = "../"
         content = dvc.api.read(path=path,
-                            repo=repo,
-                            rev=version)
+                               repo=repo,
+                               rev=version)
         df = pd.read_csv(io.StringIO(content), sep=",")
 
         return df
     except Exception as e:
-            logger.error(e)
-            return pd.DataFrame()
+        logger.error(e)
+        return pd.DataFrame()
 
 
 def run_train_pipeline(model, x, y, experiment_name, run_name):
@@ -267,13 +254,16 @@ def run_train_pipeline(model, x, y, experiment_name, run_name):
         train_pipeline = get_pipeline(model, x)
 
         X_train, X_test, y_train, y_test = train_test_split(x, y,
-                                                            test_size=0.3,
-                                                            random_state=123)
+                                                            test_size=0.3,)
         run_params = model.get_params()
+        print(X_train.shape)
+        print(X_test.shape)
+        # print(X_val.shape)
+        print(y_train.shape)
+        print(y_test.shape)
 
         train_pipeline.fit(X_train, y_train)
         return train_pipeline.log_model('model', X_test, y_test, experiment_name, run_name, run_params=run_params)
     except Exception as e:
-            logger.error(e)
-            return False
-    
+        logger.error(e)
+        return False
