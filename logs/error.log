@@ -17,3 +17,9 @@
 2022-05-26 22:10:53,208:logger:accuracy_metric() takes 2 positional arguments but 3 were given
 2022-05-26 22:39:39,442:logger:Parameter value is not iterable or distribution (key='n_estimators', value=10)
 2022-05-26 22:39:39,463:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-27 10:10:43,646:logger:The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2022-05-27 11:12:02,668:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:12:16,095:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:15:10,688:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:15:19,568:logger:Could not interpret input ''
+2022-05-27 11:16:12,278:logger:Could not interpret input 'PromoInterval'

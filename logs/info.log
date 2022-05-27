@@ -507,3 +507,217 @@ CompetitionDistance -0.021815 -0.044981  -0.145296             1.000000
 2022-05-26 22:39:28,346:logger:successfully got numerical columns
 2022-05-26 22:39:39,442:logger:Parameter value is not iterable or distribution (key='n_estimators', value=10)
 2022-05-26 22:39:39,463:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-27 10:00:49,371:logger:The dataset contains 21.01 % missing values.
+2022-05-27 10:00:59,321:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-27 10:00:59,324:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-27 10:00:59,330:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-27 10:00:59,332:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-27 10:00:59,336:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-27 10:01:00,286:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-27 10:01:00,290:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-27 10:01:00,295:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-27 10:01:00,302:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-27 10:01:00,306:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-27 10:01:00,686:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-27 10:01:01,716:logger:successfully changed PromoInterval column to string
+2022-05-27 10:01:01,719:logger:successfully changed StoreType column to string
+2022-05-27 10:01:01,722:logger:successfully changed Assortment column to string
+2022-05-27 10:01:01,723:logger:successfully changed StateHoliday column to string
+2022-05-27 10:01:01,727:logger:successfully changed Date column to datetime
+2022-05-27 10:01:01,733:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 10:01:01,735:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 10:01:01,796:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 10:01:01,798:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 10:01:01,800:logger:successfully finished fixing datatype
+2022-05-27 10:01:02,573:logger:successfully droped duplicates
+2022-05-27 10:01:24,496:logger:The dataset contains 0.0 % missing values.
+2022-05-27 10:01:26,554:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-27 10:01:27,451:logger:successfully replaced value of StateHoliday column with 0
+2022-05-27 10:01:27,613:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-27 10:01:28,485:logger:successfully changed PromoInterval column to string
+2022-05-27 10:01:28,487:logger:successfully changed StoreType column to string
+2022-05-27 10:01:28,489:logger:successfully changed Assortment column to string
+2022-05-27 10:01:28,651:logger:successfully changed StateHoliday column to string
+2022-05-27 10:01:29,222:logger:successfully changed Date column to datetime
+2022-05-27 10:01:29,224:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 10:01:29,225:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 10:01:29,226:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 10:01:29,229:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 10:01:29,230:logger:successfully finished fixing datatype
+2022-05-27 10:01:32,395:logger:successfully droped duplicates
+2022-05-27 10:01:34,704:logger:The dataset contains 0.0 % missing values.
+2022-05-27 10:01:36,842:logger:successfully changed PromoInterval column to string
+2022-05-27 10:01:36,845:logger:successfully changed StoreType column to string
+2022-05-27 10:01:36,849:logger:successfully changed Assortment column to string
+2022-05-27 10:01:36,856:logger:successfully changed StateHoliday column to string
+2022-05-27 10:01:36,871:logger:successfully changed Date column to datetime
+2022-05-27 10:01:36,873:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 10:01:36,875:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 10:01:36,879:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 10:01:36,880:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 10:01:36,882:logger:successfully finished fixing datatype
+2022-05-27 10:01:38,130:logger:successfully droped duplicates
+2022-05-27 10:06:12,131:logger:successfully displayed histogram plot
+2022-05-27 10:08:25,661:logger:successfully displayed histogram plot
+2022-05-27 10:10:43,646:logger:The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2022-05-27 10:11:03,558:logger:successfully displayed bar plot
+2022-05-27 10:11:48,918:logger:successfully displayed bar plot
+2022-05-27 10:13:19,566:logger:successfully displayed bar plot
+2022-05-27 10:13:21,564:logger:successfully displayed bar plot
+2022-05-27 10:27:10,781:logger:successfully displayed bar plot
+2022-05-27 10:27:13,036:logger:successfully displayed bar plot
+2022-05-27 10:35:37,031:logger:successfully displayed bar plot
+2022-05-27 10:35:38,658:logger:successfully displayed bar plot
+2022-05-27 10:36:10,912:logger:successfully displayed bar plot
+2022-05-27 10:36:12,405:logger:successfully displayed bar plot
+2022-05-27 10:37:54,198:logger:successfully displayed bar plot
+2022-05-27 10:38:46,435:logger:successfully displayed bar plot
+2022-05-27 10:39:31,864:logger:successfully displayed bar plot
+2022-05-27 10:40:54,378:logger:successfully displayed count plot
+2022-05-27 10:42:34,085:logger:successfully displayed count plot
+2022-05-27 10:43:17,943:logger:successfully displayed count plot
+2022-05-27 11:12:02,668:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:12:16,095:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:15:10,688:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:15:19,568:logger:Could not interpret input ''
+2022-05-27 11:16:12,278:logger:Could not interpret input 'PromoInterval'
+2022-05-27 11:17:33,769:logger:successfully displayed count plot
+2022-05-27 11:43:13,371:logger:The dataset contains 21.01 % missing values.
+2022-05-27 11:43:13,933:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-27 11:43:13,936:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-27 11:43:13,940:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-27 11:43:13,942:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-27 11:43:13,945:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-27 11:43:14,090:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-27 11:43:14,093:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-27 11:43:14,097:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-27 11:43:14,100:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-27 11:43:14,103:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-27 11:43:14,302:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-27 11:43:14,497:logger:successfully changed PromoInterval column to string
+2022-05-27 11:43:14,499:logger:successfully changed StoreType column to string
+2022-05-27 11:43:14,502:logger:successfully changed Assortment column to string
+2022-05-27 11:43:14,503:logger:successfully changed StateHoliday column to string
+2022-05-27 11:43:14,505:logger:successfully changed Date column to datetime
+2022-05-27 11:43:14,507:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 11:43:14,510:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 11:43:14,515:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 11:43:14,517:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 11:43:14,519:logger:successfully finished fixing datatype
+2022-05-27 11:43:14,956:logger:successfully droped duplicates
+2022-05-27 11:43:21,248:logger:The dataset contains 0.0 % missing values.
+2022-05-27 11:43:23,089:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-27 11:43:23,381:logger:successfully replaced value of StateHoliday column with 0
+2022-05-27 11:43:23,484:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-27 11:43:23,625:logger:successfully changed PromoInterval column to string
+2022-05-27 11:43:23,626:logger:successfully changed StoreType column to string
+2022-05-27 11:43:23,627:logger:successfully changed Assortment column to string
+2022-05-27 11:43:23,689:logger:successfully changed StateHoliday column to string
+2022-05-27 11:43:24,062:logger:successfully changed Date column to datetime
+2022-05-27 11:43:24,063:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 11:43:24,065:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 11:43:24,066:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 11:43:24,069:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 11:43:24,071:logger:successfully finished fixing datatype
+2022-05-27 11:43:25,147:logger:successfully droped duplicates
+2022-05-27 11:43:25,631:logger:The dataset contains 0.0 % missing values.
+2022-05-27 11:43:26,240:logger:successfully changed PromoInterval column to string
+2022-05-27 11:43:26,257:logger:successfully changed StoreType column to string
+2022-05-27 11:43:26,258:logger:successfully changed Assortment column to string
+2022-05-27 11:43:26,263:logger:successfully changed StateHoliday column to string
+2022-05-27 11:43:26,279:logger:successfully changed Date column to datetime
+2022-05-27 11:43:26,281:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 11:43:26,282:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 11:43:26,284:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 11:43:26,288:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 11:43:26,290:logger:successfully finished fixing datatype
+2022-05-27 11:43:26,531:logger:successfully droped duplicates
+2022-05-27 11:43:57,587:logger:successfully displayed histogram plot
+2022-05-27 11:44:19,052:logger:successfully displayed histogram plot
+2022-05-27 11:44:20,212:logger:successfully displayed bar plot
+2022-05-27 11:44:20,828:logger:successfully displayed bar plot
+2022-05-27 11:44:21,611:logger:successfully displayed bar plot
+2022-05-27 11:44:21,977:logger:successfully displayed count plot
+2022-05-27 11:44:23,188:logger:successfully displayed count plot
+2022-05-27 11:44:23,609:logger:successfully displayed count plot
+2022-05-27 11:44:29,414:logger:successfully displayed count plot
+2022-05-27 11:48:40,481:logger:successfully displayed count plot
+2022-05-27 11:48:51,170:logger:successfully displayed count plot
+2022-05-27 11:49:06,445:logger:successfully displayed count plot
+2022-05-27 11:49:15,882:logger:successfully displayed count plot
+2022-05-27 11:49:31,466:logger:successfully displayed count plot
+2022-05-27 11:54:40,416:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-27 11:54:40,418:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-27 12:08:49,891:logger:promotions have increase the mean of sales by 81.3676782076572 %
+2022-05-27 12:08:49,892:logger:promotions have increase the mean of customers by 81.3676782076572 %
+2022-05-27 12:09:10,589:logger:promotions have increase the mean of sales by 81.3676782076572 %
+2022-05-27 12:09:10,593:logger:promotions have increase the mean of customers by 6.860458181044455 %
+2022-05-27 12:09:31,701:logger:promotions have increase the mean of sales by 81.3676782076572 %
+2022-05-27 12:09:31,705:logger:promotions have increase the mean of customers by 58.37418513261995 %
+2022-05-27 12:21:26,108:logger:successfully displayed catplot plot
+2022-05-27 12:27:54,719:logger:successfully displayed catplot plot
+2022-05-27 12:29:05,594:logger:successfully displayed catplot plot
+2022-05-27 12:43:24,372:logger:successfully displayed count plot
+2022-05-27 12:53:24,332:logger:successfully displayed histogram plot
+2022-05-27 12:55:10,027:logger:successfully displayed histogram plot
+2022-05-27 13:10:16,003:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-27 13:10:16,005:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-27 13:11:17,936:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-27 13:11:17,938:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-27 13:16:00,443:logger:The dataset contains 21.01 % missing values.
+2022-05-27 13:16:00,630:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-27 13:16:00,632:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-27 13:16:00,634:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-27 13:16:00,637:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-27 13:16:00,639:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-27 13:16:00,841:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-27 13:16:00,844:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-27 13:16:00,850:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-27 13:16:00,853:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-27 13:16:00,857:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-27 13:16:01,422:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-27 13:16:01,703:logger:successfully changed PromoInterval column to string
+2022-05-27 13:16:01,706:logger:successfully changed StoreType column to string
+2022-05-27 13:16:01,708:logger:successfully changed Assortment column to string
+2022-05-27 13:16:01,709:logger:successfully changed StateHoliday column to string
+2022-05-27 13:16:01,711:logger:successfully changed Date column to datetime
+2022-05-27 13:16:01,713:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 13:16:01,715:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 13:16:01,717:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 13:16:01,719:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 13:16:01,721:logger:successfully finished fixing datatype
+2022-05-27 13:16:02,026:logger:successfully droped duplicates
+2022-05-27 13:16:10,346:logger:The dataset contains 0.0 % missing values.
+2022-05-27 13:16:13,430:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-27 13:16:14,242:logger:successfully replaced value of StateHoliday column with 0
+2022-05-27 13:16:14,408:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-27 13:16:14,888:logger:successfully changed PromoInterval column to string
+2022-05-27 13:16:14,889:logger:successfully changed StoreType column to string
+2022-05-27 13:16:14,891:logger:successfully changed Assortment column to string
+2022-05-27 13:16:15,022:logger:successfully changed StateHoliday column to string
+2022-05-27 13:16:15,439:logger:successfully changed Date column to datetime
+2022-05-27 13:16:15,440:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 13:16:15,442:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 13:16:15,443:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 13:16:15,444:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 13:16:15,447:logger:successfully finished fixing datatype
+2022-05-27 13:16:17,506:logger:successfully droped duplicates
+2022-05-27 13:16:18,439:logger:The dataset contains 0.0 % missing values.
+2022-05-27 13:16:19,579:logger:successfully changed PromoInterval column to string
+2022-05-27 13:16:19,581:logger:successfully changed StoreType column to string
+2022-05-27 13:16:19,582:logger:successfully changed Assortment column to string
+2022-05-27 13:16:19,587:logger:successfully changed StateHoliday column to string
+2022-05-27 13:16:19,601:logger:successfully changed Date column to datetime
+2022-05-27 13:16:19,602:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-27 13:16:19,604:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-27 13:16:19,605:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-27 13:16:19,606:logger:successfully changed Promo2SinceYear column to integer
+2022-05-27 13:16:19,607:logger:successfully finished fixing datatype
+2022-05-27 13:16:20,313:logger:successfully droped duplicates
+2022-05-27 13:16:47,721:logger:successfully displayed histogram plot
