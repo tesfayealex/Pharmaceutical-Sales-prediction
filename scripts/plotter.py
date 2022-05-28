@@ -110,9 +110,9 @@ class Plotter:
 
     def plot_catplot(self, df: pd.DataFrame, x_col: str, y_col: str, hue: str, kind: str, title: str) -> None:
         try:
-            plt.figure(figsize=(12, 7))
+            plt.figure(figsize=(15, 10))
             sns.catplot(data=df, x=x_col, y=y_col, hue=hue, kind=kind)
-            plt.title(title, size=20)
+            # plt.title(title, size=20)
             plt.xticks(fontsize=14)
             plt.yticks(fontsize=14)
             # plt.show()
