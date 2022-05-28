@@ -23,3 +23,41 @@
 2022-05-27 11:15:10,688:logger:Could not interpret input 'PromoInterval'
 2022-05-27 11:15:19,568:logger:Could not interpret input ''
 2022-05-27 11:16:12,278:logger:Could not interpret input 'PromoInterval'
+2022-05-27 14:28:06,301:logger:unknown Git revision 'd47aedd9e2d580e06a6ef7ce1732e8b6'
+2022-05-27 14:28:23,746:logger:unknown Git revision 'd47aedd9e2d580e06a6ef7ce1732e8b6'
+2022-05-27 14:35:01,158:logger:URL 'gdrive://1vpBbSwDbIQZTxYxF7cIZtiDd9cYpau1Z' is supported but requires these missing dependencies: ['pydrive2']. To install dvc with those dependencies, run:
+
+	pip install 'dvc[gdrive]'
+
+See <[36mhttps://dvc.org/doc/install[39m> for more info.
+2022-05-27 14:37:16,571:logger:Can't find 'train.csv' neither locally nor on remote
+2022-05-27 14:37:32,851:logger:Can't find 'test.csv' neither locally nor on remote
+2022-05-27 14:38:22,579:logger:Can't find 'test.csv' neither locally nor on remote
+2022-05-27 14:38:30,518:logger:Can't find 'train.csv' neither locally nor on remote
+2022-05-27 14:43:08,217:logger:The path 'train.csv' does not exist in the target repository 'https://github.com/tesfayealex/Pharmaceutical-Sales-prediction' neither as a DVC output nor as a Git-tracked file.
+2022-05-27 14:43:12,161:logger:The path 'train.csv' does not exist in the target repository 'https://github.com/tesfayealex/Pharmaceutical-Sales-prediction' neither as a DVC output nor as a Git-tracked file.
+2022-05-27 14:45:21,991:logger:The path 'train.csv' does not exist in the target repository 'https://github.com/tesfayealex/Pharmaceutical-Sales-prediction' neither as a DVC output nor as a Git-tracked file.
+2022-05-27 14:46:30,666:logger:Can't find 'train.csv' neither locally nor on remote
+2022-05-27 16:02:32,457:logger:Can't find 'train.csv.dvc' neither locally nor on remote
+2022-05-27 16:17:39,968:logger:API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002570AC24460>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2022-05-27 16:43:02,195:logger:'GridSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 16:45:56,296:logger:API request to http://localhost:5000/api/2.0/mlflow/experiments/list failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/list?view_type=ALL (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002570A7D1BE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2022-05-27 17:00:33,616:logger:'GridSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:04:24,402:logger:'GridSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:08:14,785:logger:'GridSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:10:03,244:logger:'GridSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:13:30,191:logger:Parameter value is not iterable or distribution (key='n_estimators', value=10)
+2022-05-27 17:13:30,195:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-27 17:15:06,059:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:32:58,542:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 17:35:59,153:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-27 22:10:35,357:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
+2022-05-27 22:20:32,975:logger:Run with UUID d09e8991c6da4eba8ca40703cee1baff is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2022-05-27 23:11:25,576:logger:API request to http://196.189.44.49:5000/api/2.0/mlflow/runs/update failed with exception HTTPConnectionPool(host='196.189.44.49', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D3B8D8A100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2022-05-27 23:13:44,126:logger:INVALID_PARAMETER_VALUE:  Model registry functionality is unavailable; got unsupported URI './mlruns' for model registry data storage. Supported URI schemes are: ['postgresql', 'mysql', 'sqlite', 'mssql']. See https://www.mlflow.org/docs/latest/tracking.html#storage for how to run an MLflow server against one of the supported backend storage locations.
+2022-05-27 23:30:44,505:logger:INVALID_PARAMETER_VALUE:  Model registry functionality is unavailable; got unsupported URI './mlruns' for model registry data storage. Supported URI schemes are: ['postgresql', 'mysql', 'sqlite', 'mssql']. See https://www.mlflow.org/docs/latest/tracking.html#storage for how to run an MLflow server against one of the supported backend storage locations.
+2022-05-27 23:45:28,941:logger:INVALID_PARAMETER_VALUE:  Model registry functionality is unavailable; got unsupported URI './mlruns' for model registry data storage. Supported URI schemes are: ['postgresql', 'mysql', 'sqlite', 'mssql']. See https://www.mlflow.org/docs/latest/tracking.html#storage for how to run an MLflow server against one of the supported backend storage locations.
+2022-05-28 00:17:16,495:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
+2022-05-28 09:38:11,236:logger:Run with UUID a44f584c27e64e6e84c290843b7ac018 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2022-05-28 09:38:47,941:logger:Run with UUID a44f584c27e64e6e84c290843b7ac018 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2022-05-28 09:56:47,114:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
