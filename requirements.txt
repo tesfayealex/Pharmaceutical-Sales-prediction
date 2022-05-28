@@ -55,7 +55,6 @@ ERPpeek==1.7.1
 et-xmlfile==1.1.0
 executing==0.8.3
 fastjsonschema==2.15.3
-feedparser==5.2.1
 Flask==2.1.2
 flatbuffers==1.12
 flatten-dict==0.4.2
