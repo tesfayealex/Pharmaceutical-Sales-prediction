@@ -1187,3 +1187,101 @@ See <[36mhttps://dvc.org/doc/install[39m> for more info.
 2022-05-28 09:56:11,820:logger:MAE Score: 259.7574666666667
 2022-05-28 09:56:12,537:logger:Accuracy: 95.12 %.
 2022-05-28 09:56:47,114:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
+2022-05-28 16:43:58,739:logger:The dataset contains 21.01 % missing values.
+2022-05-28 16:43:58,942:logger:unique values for CompetitionOpenSinceMonth  [ 9. 11. 12.  4. 10.  8. nan  3.  6.  5.  1.  2.  7.]
+2022-05-28 16:43:58,945:logger:unique values for CompetitionOpenSinceYear  [2008. 2007. 2006. 2009. 2015. 2013. 2014. 2000. 2011.   nan 2010. 2005.
+ 1999. 2003. 2012. 2004. 2002. 1961. 1995. 2001. 1990. 1994. 1900. 1998.]
+2022-05-28 16:43:58,947:logger:unique values for promo2sinceweek  [nan 13. 14.  1. 45. 40. 26. 22.  5.  6. 10. 31. 37.  9. 39. 27. 18. 35.
+ 23. 48. 36. 50. 44. 49. 28.]
+2022-05-28 16:43:58,952:logger:unique values for Promo2SinceYear  [  nan 2010. 2011. 2012. 2009. 2014. 2015. 2013.]
+2022-05-28 16:43:58,956:logger:unique values for PromoInterval  [nan 'Jan,Apr,Jul,Oct' 'Feb,May,Aug,Nov' 'Mar,Jun,Sept,Dec']
+2022-05-28 16:43:59,196:logger:successfully fixed missing values of CompetitionOpenSinceYear column with 1990
+2022-05-28 16:43:59,199:logger:successfully fixed missing values of CompetitionOpenSinceMonth column with 1
+2022-05-28 16:43:59,201:logger:successfully fixed missing values of Promo2SinceWeek column with 0
+2022-05-28 16:43:59,206:logger:successfully fixed missing values of Promo2SinceYear column with 0
+2022-05-28 16:43:59,209:logger:successfully fixed missing values of PromoInterval column with Nan,Nan,Nan,Nan
+2022-05-28 16:43:59,580:logger:successfully fixed missing values of CompetitionDistance column with 75860.0
+2022-05-28 16:43:59,715:logger:successfully changed PromoInterval column to string
+2022-05-28 16:43:59,717:logger:successfully changed StoreType column to string
+2022-05-28 16:43:59,719:logger:successfully changed Assortment column to string
+2022-05-28 16:43:59,726:logger:successfully changed StateHoliday column to string
+2022-05-28 16:43:59,727:logger:successfully changed Date column to datetime
+2022-05-28 16:43:59,730:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-28 16:43:59,731:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-28 16:43:59,735:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-28 16:43:59,739:logger:successfully changed Promo2SinceYear column to integer
+2022-05-28 16:43:59,740:logger:successfully finished fixing datatype
+2022-05-28 16:43:59,950:logger:successfully droped duplicates
+2022-05-28 16:44:04,013:logger:The dataset contains 0.0 % missing values.
+2022-05-28 16:44:04,847:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c' 0]
+2022-05-28 16:44:05,132:logger:successfully replaced value of StateHoliday column with 0
+2022-05-28 16:44:05,191:logger:unique values for StateHoliday  ['0' 'a' 'b' 'c']
+2022-05-28 16:44:05,336:logger:successfully changed PromoInterval column to string
+2022-05-28 16:44:05,337:logger:successfully changed StoreType column to string
+2022-05-28 16:44:05,338:logger:successfully changed Assortment column to string
+2022-05-28 16:44:05,413:logger:successfully changed StateHoliday column to string
+2022-05-28 16:44:05,708:logger:successfully changed Date column to datetime
+2022-05-28 16:44:05,713:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-28 16:44:05,716:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-28 16:44:05,719:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-28 16:44:05,720:logger:successfully changed Promo2SinceYear column to integer
+2022-05-28 16:44:05,721:logger:successfully finished fixing datatype
+2022-05-28 16:44:06,835:logger:successfully droped duplicates
+2022-05-28 16:44:07,933:logger:The dataset contains 0.0 % missing values.
+2022-05-28 16:44:08,266:logger:successfully changed PromoInterval column to string
+2022-05-28 16:44:08,267:logger:successfully changed StoreType column to string
+2022-05-28 16:44:08,269:logger:successfully changed Assortment column to string
+2022-05-28 16:44:08,274:logger:successfully changed StateHoliday column to string
+2022-05-28 16:44:08,288:logger:successfully changed Date column to datetime
+2022-05-28 16:44:08,289:logger:successfully changed CompetitionOpenSinceYear column to integer
+2022-05-28 16:44:08,290:logger:successfully changed CompetitionOpenSinceMonth column to integer
+2022-05-28 16:44:08,292:logger:successfully changed Promo2SinceWeek column to integer
+2022-05-28 16:44:08,293:logger:successfully changed Promo2SinceYear column to integer
+2022-05-28 16:44:08,294:logger:successfully finished fixing datatype
+2022-05-28 16:44:08,659:logger:successfully droped duplicates
+2022-05-28 16:44:30,923:logger:successfully displayed histogram plot
+2022-05-28 16:44:59,541:logger:successfully displayed histogram plot
+2022-05-28 16:45:03,057:logger:successfully displayed bar plot
+2022-05-28 16:45:03,485:logger:successfully displayed bar plot
+2022-05-28 16:45:05,008:logger:successfully displayed bar plot
+2022-05-28 16:45:05,772:logger:successfully displayed count plot
+2022-05-28 16:45:16,098:logger:successfully displayed count plot
+2022-05-28 16:45:27,039:logger:successfully displayed count plot
+2022-05-28 16:45:40,784:logger:successfully displayed count plot
+2022-05-28 16:45:44,671:logger:successfully displayed count plot
+2022-05-28 16:46:13,084:logger:successfully displayed heatmap plot
+2022-05-28 16:46:32,243:logger:promo usage for the train data is 38.151451668241236 %
+2022-05-28 16:46:32,246:logger:promo usage for the test data is 39.583333333333336 %
+2022-05-28 16:46:38,266:logger:              Sales  Customers
+Sales      1.000000   0.894711
+Customers  0.894711   1.000000
+2022-05-28 16:46:38,341:logger:successfully displayed heatmap plot
+2022-05-28 16:46:38,658:logger:promotions have increase the mean of sales by 81.3676782076572 %
+2022-05-28 16:46:38,660:logger:promotions have increase the mean of customers by 58.37418513261995 %
+2022-05-28 16:46:39,425:logger: increase on all store with average is 62.184235408598724
+2022-05-28 16:46:39,912:logger:              Promo  Customers
+Promo      1.000000   0.316169
+Customers  0.316169   1.000000
+2022-05-28 16:46:39,979:logger:successfully displayed heatmap plot
+2022-05-28 16:47:21,513:logger:successfully displayed catplot plot
+2022-05-28 16:47:48,317:logger:successfully displayed catplot plot
+2022-05-28 16:48:11,646:logger:successfully displayed heatmap plot
+2022-05-28 19:49:17,999:logger:successfully got catagorical columns
+2022-05-28 19:49:18,335:logger:successfully got catagorical columns
+2022-05-28 19:49:18,337:logger:successfully got numerical columns
+2022-05-28 19:49:24,223:logger:RMSE Score: 383.25211299700186
+2022-05-28 19:49:24,225:logger:R2_Squared: 0.9862290892998192
+2022-05-28 19:49:24,226:logger:MAE Score: 249.70256666666666
+2022-05-28 19:49:24,440:logger:Accuracy: 95.15 %.
+2022-05-28 19:49:25,589:logger:feature importnace plotted
+2022-05-28 19:50:11,193:logger:plotted prediction vs true labels
+2022-05-28 20:23:30,580:logger:successfully got catagorical columns
+2022-05-28 20:23:31,911:logger:successfully got catagorical columns
+2022-05-28 20:23:31,913:logger:successfully got numerical columns
+2022-05-28 20:25:03,553:logger:RMSE Score: 462.54128903520984
+2022-05-28 20:25:03,559:logger:R2_Squared: 0.9855259278624036
+2022-05-28 20:25:03,563:logger:MAE Score: 281.06997440712007
+2022-05-28 20:25:05,424:logger:Accuracy: 95.01 %.
+2022-05-28 20:25:13,859:logger:feature importnace plotted
+2022-05-28 20:27:37,996:logger:
+2022-05-28 20:44:14,550:logger:API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=120)"))

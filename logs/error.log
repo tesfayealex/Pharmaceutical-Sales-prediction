@@ -61,3 +61,5 @@ See <[36mhttps://dvc.org/doc/install[39m> for more info.
 2022-05-28 09:38:11,236:logger:Run with UUID a44f584c27e64e6e84c290843b7ac018 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
 2022-05-28 09:38:47,941:logger:Run with UUID a44f584c27e64e6e84c290843b7ac018 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
 2022-05-28 09:56:47,114:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
+2022-05-28 20:27:37,996:logger:
+2022-05-28 20:44:14,550:logger:API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=120)"))
