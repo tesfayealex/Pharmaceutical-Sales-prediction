@@ -70,3 +70,7 @@ See <[36mhttps://dvc.org/doc/install[39m> for more info.
 2022-05-29 10:21:06,045:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
 2022-05-29 10:21:06,047:logger:'list' object has no attribute 'keys'
 2022-05-29 10:41:22,495:logger:name 'pred_plot' is not defined
+2022-05-29 15:53:17,085:logger:could not allocate 58720256 bytes
+2022-05-29 15:53:18,880:logger:'TrainingPipeline' object has no attribute '_TrainingPipeline__pipeline'
+2022-05-29 16:29:54,393:logger:[Errno 2] No such file or directory: '../images/feature_importance.png'
+2022-05-29 16:31:30,055:logger:[Errno 2] No such file or directory: '../images/feature_importance.png'
