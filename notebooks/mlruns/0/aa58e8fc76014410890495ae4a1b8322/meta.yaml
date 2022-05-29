@@ -1,0 +1,15 @@
+artifact_uri: ./mlruns/0/aa58e8fc76014410890495ae4a1b8322/artifacts
+end_time: 1653686548619
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: aa58e8fc76014410890495ae4a1b8322
+run_uuid: aa58e8fc76014410890495ae4a1b8322
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1653686548456
+status: 3
+tags: []
+user_id: temesgen

@@ -1766,3 +1766,5 @@ Customers  0.316169   1.000000
 2022-05-29 17:11:06,058:logger:Accuracy: 91.32 %.
 2022-05-29 17:11:06,599:logger:feature importance plotted
 2022-05-29 17:11:06,994:logger:plotted prediction vs true labels
+2022-05-29 18:29:56,154:logger:successfully got catagorical columns
+2022-05-29 18:29:56,171:logger:successfully got numerical columns
