@@ -1,7 +1,29 @@
 import streamlit as st
 
+"""Frameworks for running multiple Streamlit applications as a single app.
+"""
+
 
 class MultiApp:
+    """Framework for combining multiple streamlit applications.
+    Usage:
+        def foo():
+            st.title("Hello Foo")
+        def bar():
+            st.title("Hello Bar")
+        app = MultiApp()
+        app.add_app("Foo", foo)
+        app.add_app("Bar", bar)
+        app.run()
+    It is also possible keep each application in a separate file.
+        import foo
+        import bar
+        app = MultiApp()
+        app.add_app("Foo", foo.app)
+        app.add_app("Bar", bar.app)
+        app.run()
+    """
+
     def __init__(self):
         self.apps = []
 
@@ -21,7 +43,7 @@ class MultiApp:
 
     def run(self):
         # app = st.sidebar.radio(
-        app = st.selectbox(
+        app = st.sidebar.selectbox(
             'Navigation',
             self.apps,
             format_func=lambda app: app['title'])

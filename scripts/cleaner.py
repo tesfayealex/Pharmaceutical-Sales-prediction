@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer
 from logger import logger
+from datetime import date, datetime
 
 
 class CleanDataFrame:
@@ -76,7 +77,7 @@ class CleanDataFrame:
             # Calculate percentage of missing values
             logger.info(
                 f"The dataset contains {round(((totalMissing/totalCells) * 100), 2)} % missing values.")
-            return  round(((totalMissing/totalCells) * 100), 2)
+            return round(((totalMissing/totalCells) * 100), 2)
         except Exception as e:
             logger.error(e)
 
@@ -149,6 +150,98 @@ class CleanDataFrame:
             logger.error(e)
             return df
 
+    def find_before_holiday_dates(self, df):
+        try:
+            today = date.today()
+            christmass = datetime.strptime(
+                '2015-12-25', '%Y-%m-%d').date().replace(year=today.year)
+            easter = datetime.strptime(
+                '2015-04-09', '%Y-%m-%d').date().replace(year=today.year)
+            store_value = x['Store'].values
+            x = x['Date'].values
+            converted_dates = []
+            response_array = []
+            for index, value in enumerate(x):
+                exp = df[df['Store'] == store_value[index]]
+                exp = exp[exp["StateHoliday"] != '0'].sort_values(by="Date")
+                the_dates = exp['Date'].unique()
+                converted_dates = []
+                for day in dates:
+                    converted_dates.append(datetime.strptime(
+                        str(day).split('T')[0], '%Y-%m-%d'))
+                value = datetime.strptime(str(value).split('T')[0], '%Y-%m-%d')
+
+                if value in converted_dates:
+                    response_array.append(0)
+                else:
+                    above_dates = []
+                    for d in converted_dates:
+                        if d > value:
+                            above_dates.append(d)
+                    if len(above_dates) != 0:
+                        the_date = above_dates[0]
+                        response_array.append(abs((the_date - value).days))
+                    else:
+                        value = value.date().replace(year=today.year)
+                        christmass_diff = (christmass - value).days
+                        easter_diff = (easter - value).days
+                        if christmass_diff < 0:
+                            christmass_diff = 365 + christmass_diff
+                        if easter_diff < 0:
+                            easter_diff = 365 + easter_diff
+                        if(easter_diff < christmass_diff):
+                            diff = easter_diff
+                        elif(easter_diff >= christmass_diff):
+                            diff = christmass_diff
+                        response_array.append(diff)
+        except Exception as e:
+            logger.error(e)
+        return response_array
+
+    def scale_column(self, df, column: str, range_tup: tuple = (0, 1)) -> pd.DataFrame:
+        """
+            Returns the objects DataFrames column normalized using Normalizer
+            Parameters
+        """
+        try:
+            std_column_df = pd.DataFrame(df[column])
+            std_column_values = std_column_df.values
+            minmax_scaler = MinMaxScaler(feature_range=range_tup)
+            normalized_data = minmax_scaler.fit_transform(std_column_values)
+            df[column] = normalized_data
+            return df
+        except Exception as e:
+            logger.error(e)
+
+    def scale_columns(self, df, columns: list, range_tup: tuple = (0, 1)) -> pd.DataFrame:
+        try:
+            for col in columns:
+                df = self.scale_column(df, col, range_tup)
+
+            return df
+        except Exception as e:
+            logger.error(e)
+
+    def change_datatypes(self, dataframe: pd.DataFrame) -> pd.DataFrame:
+        """
+        A simple function which changes the data types of the dataframe and returns it
+        """
+        try:
+            data_types = dataframe.dtypes
+            changes = ['float64', 'int64']
+            for col in data_types.index:
+                if(data_types[col] in changes):
+                    if(data_types[col] == 'float64'):
+                        dataframe[col] = pd.to_numeric(
+                            dataframe[col], downcast='float')
+                    elif(data_types[col] == 'int64'):
+                        dataframe[col] = pd.to_numeric(
+                            dataframe[col], downcast='unsigned')
+        except Exception as e:
+            logger.error(e)
+
+        return dataframe
+
     def minmax_scale(self, df: pd.DataFrame) -> pd.DataFrame:
         try:
             scaller = MinMaxScaler()
@@ -176,6 +269,16 @@ class CleanDataFrame:
         except Exception as e:
             logger.error(e)
             return df
+
+    def get_difference(self, dataset, interval=1):
+        """
+         A function to get the difference of scaled data
+        """
+        diff = list()
+        for i in range(interval, len(dataset)):
+            value = dataset[i] - dataset[i - interval]
+            diff.append(value)
+        return pd.Series(diff)
 
     def drop_duplicates(self, df: pd.DataFrame, subset=None) -> pd.DataFrame:
         """

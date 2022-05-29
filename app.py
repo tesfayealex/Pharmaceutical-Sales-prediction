@@ -1,6 +1,7 @@
 from multiapp import MultiApp
 import streamlit as st
 import sys
+from dashboard import EDA
 sys.path.insert(0, './scripts')
 
 # import your app modules here
@@ -21,6 +22,6 @@ This multi-page app is using the [streamlit-multiapps](https://github.com/uprane
 
 # Add all your application here
 # app.add_app("Predict Satisfaction", model_implementation.app)
-
+app.add_app("EDA", EDA.app)
 # The main app
 app.run()

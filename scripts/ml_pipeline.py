@@ -1,3 +1,4 @@
+from statistics import mode
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
@@ -54,21 +55,29 @@ class TrainingPipeline(Pipeline):
         logger.info(f'RMSE Score: {rmse}')
         logger.info(f'R2_Squared: {r_sq}')
         logger.info(f'MAE Score: {mae}')
+        return {
+            'RMSE Score': round(rmse, 2),
+            'R2_Squared': round(r_sq, 2),
+            'MAE Score': round(mae, 2),
+        }
 
     def accuracy_metric(self, y_pred, y_test):
         errors = abs(y_pred - y_test)
         mape = 100 * (errors / y_test)
         # Calculate and display accuracy
-        accuracy = 100 - np.mean(mape)
+        accuracy = 100 - np.mean(mape[np.isfinite(mape)])
+
         logger.info(f'Accuracy: {round(accuracy, 2)} %.')
+        return {'Accuracy': round(accuracy, 2)}
 
     def get_feature_importance(self, model, x):
         try:
+
             feature_importance = None
-            if str(model) == "LogisticRegression()":
-                feature_importance = model.coef_[0]
-            else:
+            if str(type(model)) == "<class 'sklearn.ensemble._forest.RandomForestRegressor'>":
                 feature_importance = model.feature_importances_
+            else:
+                feature_importance = model.best_estimator_.feature_importances_
             feature_array = {}
             for i, v in enumerate(feature_importance):
                 feature_array[x.columns[i]] = v
@@ -91,13 +100,11 @@ class TrainingPipeline(Pipeline):
             run_metrics = self.__pipeline.calculate_metrics(y_test, y_pred)
             accuracy_metrics = self.__pipeline.accuracy_metric(y_pred, y_test)
             feature_importance = self.get_feature_importance(model, X_test)
-            # feature_importance_plot = self.plot_feature_importance(
-            #     feature_importance)
-            # pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
-            # cm_plot = self.plot_confusion_matrix(y_test, y_pred)
-            # print(run_metrics)
-            # logger.info(feature_importance)
+            feature_importance_plot = self.plot_feature_importance(
+                feature_importance)
+            pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
             try:
+                mlflow.end_run()
                 mlflow.set_experiment(experiment_name)
                 mlflow.set_tracking_uri('http://localhost:5000')
                 with mlflow.start_run(run_name=run_name):
@@ -106,25 +113,27 @@ class TrainingPipeline(Pipeline):
                             mlflow.log_param(name, run_params[name])
                     for name in run_metrics:
                         mlflow.log_metric(name, run_metrics[name])
+                    mlflow.log_metric("Accuracy", accuracy_metrics['Accuracy'])
 
                     mlflow.log_param("columns", X_test.columns.to_list())
-                    # mlflow.log_figure(pred_plot, "predictions_plot.png")
-                    # mlflow.log_figure(cm_plot, "confusion_matrix.png")
-                    # mlflow.log_figure(feature_importance_plot,
-                    #                 "feature_importance.png")
-                    # pred_plot.savefig("../images/predictions_plot.png")
-                    # cm_plot.savefig("../images/confusion_matrix.png")
-                    # feature_importance_plot.savefig("../images/feature_importance.png")
-                    mlflow.log_dict(feature_importance, "feature_importance.json")
+                    mlflow.log_figure(pred_plot, "predictions_plot.png")
+                    mlflow.log_figure(feature_importance_plot,
+                                      "feature_importance.png")
+                pred_plot.savefig("../images/predictions_plot.png")
+                feature_importance_plot.savefig(
+                    "../images/feature_importance.png")
+                mlflow.log_dict(feature_importance, "feature_importance.json")
 
                 model_name = self.make_model_name(experiment_name, run_name)
                 mlflow.sklearn.log_model(
                     sk_model=self.__pipeline, artifact_path='models', registered_model_name=model_name)
+                print(
+                    'Successfully registered model Random Forest with cleaned data_sixth_run_Sat-May-28-19:51:43-2022')
             except Exception as e:
                 logger.error(e)
             print('Run - %s is logged to Experiment - %s' %
                   (run_name, experiment_name))
-            # return run_metrics
+            return run_metrics
         except Exception as e:
             logger.error(e)
             return {}
@@ -178,7 +187,7 @@ class TrainingPipeline(Pipeline):
             ax.set_xlabel("Features", fontsize=20)
             ax.set_ylabel("Importance", fontsize=20)
             ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-            logger.info("feature importnace plotted")
+            logger.info("feature importance plotted")
             # ax.show()
             # figure = ax.get_figure()
             return fig
@@ -225,7 +234,7 @@ def get_pipeline(model, x):
         logger.error(e)
 
 
-def dvc_get_data(path, version='72d1bf77e90769aaef56e18685215ddc98af3343'):
+def dvc_get_data(path, version='d47aedd9e2d580e06a6ef7ce1732e8b6'):
     try:
         repo = "../"
         content = dvc.api.read(path=path,
@@ -256,12 +265,6 @@ def run_train_pipeline(model, x, y, experiment_name, run_name):
         X_train, X_test, y_train, y_test = train_test_split(x, y,
                                                             test_size=0.3,)
         run_params = model.get_params()
-        print(X_train.shape)
-        print(X_test.shape)
-        # print(X_val.shape)
-        print(y_train.shape)
-        print(y_test.shape)
-
         train_pipeline.fit(X_train, y_train)
         return train_pipeline.log_model('model', X_test, y_test, experiment_name, run_name, run_params=run_params)
     except Exception as e:
