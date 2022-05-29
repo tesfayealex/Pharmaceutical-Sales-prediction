@@ -6,8 +6,8 @@ import sys
 import os
 from pprint import pprint
 import json
-sys.path.append('../scripts')
-from eda_read_data import ReadData
+sys.path.append('../')
+from scripts.eda_read_data import ReadData
 
 class TestReadData(unittest.TestCase):
 
