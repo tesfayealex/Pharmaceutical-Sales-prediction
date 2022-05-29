@@ -15,7 +15,7 @@ class TestReadData(unittest.TestCase):
         self.loader = ReadData()
 
     def test_read_csv(self):
-        ad_df = self.loader.read_csv('../tests/test_data.csv')
+        ad_df = self.loader.read_csv('tests/test_data.csv')
         self.assertEqual(len(ad_df), 6)
 
 
