@@ -28,12 +28,12 @@ class TestCleanerModule(unittest.TestCase):
     # def test_percent_missing(self):
     #     df = pd.DataFrame([[1, "a", "b",], [5, "c", "d", 8]])
         # self.assertEqual(self.cleaner.percent_missing(df), 12.5) 
-    def test_replace_value(self):
-        df = pd.DataFrame([[1, "a", "b",], [5, "c", "d", 8]])
-        df.rename(columns={0:"first"},)
-        print(df.rename(columns={0:"first"}))
-        fullfilled_df = pd.DataFrame([[1, "a", "b"], [5, "c", "d", 8]])
-        self.assertEqual(self.cleaner.replace_value(df,"first",1), 12.5)   
+    # def test_replace_value(self):
+    #     df = pd.DataFrame([[1, "a", "b",], [5, "c", "d", 8]])
+    #     df.rename(columns={0:"first"},)
+    #     print(df.rename(columns={0:"first"}))
+    #     fullfilled_df = pd.DataFrame([[1, "a", "b"], [5, "c", "d", 8]])
+    #     self.assertEqual(self.cleaner.replace_value(df,"first",1), 12.5)   
 
 
 if __name__ == '__main__':

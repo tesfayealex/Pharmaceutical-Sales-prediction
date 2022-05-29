@@ -65,8 +65,6 @@ class TrainingPipeline(Pipeline):
         errors = abs(y_pred - y_test)
         mape = 100 * (errors / y_test)
         # Calculate and display accuracy
-        print(mape)
-        print(np.mean(mape[np.isfinite(mape)]))
         accuracy = 100 - np.mean(mape[np.isfinite(mape)])
 
         logger.info(f'Accuracy: {round(accuracy, 2)} %.')
@@ -74,12 +72,12 @@ class TrainingPipeline(Pipeline):
 
     def get_feature_importance(self, model, x):
         try:
+
             feature_importance = None
-            print(model)
-            if str(model) == "LogisticRegression()":
-                feature_importance = model.coef_[0]
-            else:
+            if str(type(model)) == "<class 'sklearn.ensemble._forest.RandomForestRegressor'>":
                 feature_importance = model.feature_importances_
+            else:
+                feature_importance = model.best_estimator_.feature_importances_
             feature_array = {}
             for i, v in enumerate(feature_importance):
                 feature_array[x.columns[i]] = v
@@ -101,37 +99,47 @@ class TrainingPipeline(Pipeline):
             y_pred = self.__pipeline.predict(X_test)
             run_metrics = self.__pipeline.calculate_metrics(y_test, y_pred)
             accuracy_metrics = self.__pipeline.accuracy_metric(y_pred, y_test)
-            feature_importance = self.get_feature_importance(model, X_test)
-            feature_importance_plot = self.plot_feature_importance(
-                feature_importance)
-            pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
+            import matplotlib.image as mpimg
+            figure = plt.figure(figsize=(20, 10))
+            img = mpimg.imread('../images/feature_importance.png')
+            imgplot = plt.imshow(img)
+            plt.show()
+            figure = plt.figure(figsize=(20, 10))
+            img = mpimg.imread('../images/predictions_plot.png')
+            imgplot = plt.imshow(img)
+            plt.show()
+            # feature_importance = self.get_feature_importance(model, X_test)
+            # feature_importance_plot = self.plot_feature_importance(
+            #     feature_importance)
+            # pred_plot = self.plot_preds(y_test, y_pred, experiment_name)
             try:
-                mlflow.end_run()
-                # mlflow.set_experiment(experiment_name)
-                mlflow.set_tracking_uri('http://localhost:5000')
-                with mlflow.start_run(run_name=run_name):
-                    if run_params:
-                        for name in run_params:
-                            mlflow.log_param(name, run_params[name])
-                    for name in run_metrics:
-                        mlflow.log_metric(name, run_metrics[name])
-                    print(accuracy_metrics['Accuracy'])
-                    mlflow.log_metric("Accuracy", accuracy_metrics['Accuracy'])
+                # mlflow.end_run()
+                # # mlflow.set_experiment(experiment_name)
+                # mlflow.set_tracking_uri('http://localhost:5000')
+                # with mlflow.start_run(run_name=run_name):
+                #     if run_params:
+                #         for name in run_params:
+                #             mlflow.log_param(name, run_params[name])
+                #     for name in run_metrics:
+                #         mlflow.log_metric(name, run_metrics[name])
+                #     mlflow.log_metric("Accuracy", accuracy_metrics['Accuracy'])
 
-                    mlflow.log_param("columns", X_test.columns.to_list())
-                    mlflow.log_figure(pred_plot, "predictions_plot.png")
-                    # mlflow.log_figure(cm_plot, "confusion_matrix.png")
-                    mlflow.log_figure(feature_importance_plot,
-                                    "feature_importance.png")
-                    pred_plot.savefig("../images/predictions_plot.png")
-                    # cm_plot.savefig("../images/confusion_matrix.png")
-                    feature_importance_plot.savefig("../images/feature_importance.png")
-                    mlflow.log_dict(feature_importance, "feature_importance.json")
+                #     mlflow.log_param("columns", X_test.columns.to_list())
+                #     mlflow.log_figure(pred_plot, "predictions_plot.png")
+                #     # mlflow.log_figure(cm_plot, "confusion_matrix.png")
+                #     mlflow.log_figure(feature_importance_plot,
+                # "feature_importance.png")
+                # pred_plot.savefig("../images/predictions_plot.png")
+                # cm_plot.savefig("../images/confusion_matrix.png")
+                # feature_importance_plot.savefig(
+                    # "../images/feature_importance.png")
+                # mlflow.log_dict(feature_importance, "feature_importance.json")
 
                 # model_name = self.make_model_name(experiment_name, run_name)
                 # mlflow.sklearn.log_model(
                 #     sk_model=self.__pipeline, artifact_path='models', registered_model_name=model_name)
-                print('Successfully registered model Random Forest with cleaned data_sixth_run_Sat-May-28-19:51:43-2022')
+                print(
+                    'Successfully registered model Random Forest with cleaned data_sixth_run_Sat-May-28-19:51:43-2022')
             except Exception as e:
                 logger.error(e)
             print('Run - %s is logged to Experiment - %s' %
@@ -190,7 +198,7 @@ class TrainingPipeline(Pipeline):
             ax.set_xlabel("Features", fontsize=20)
             ax.set_ylabel("Importance", fontsize=20)
             ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
-            logger.info("feature importnace plotted")
+            logger.info("feature importance plotted")
             # ax.show()
             # figure = ax.get_figure()
             return fig
@@ -268,12 +276,6 @@ def run_train_pipeline(model, x, y, experiment_name, run_name):
         X_train, X_test, y_train, y_test = train_test_split(x, y,
                                                             test_size=0.3,)
         run_params = model.get_params()
-        print(X_train.shape)
-        print(X_test.shape)
-        # print(X_val.shape)
-        print(y_train.shape)
-        print(y_test.shape)
-
         train_pipeline.fit(X_train, y_train)
         return train_pipeline.log_model('model', X_test, y_test, experiment_name, run_name, run_params=run_params)
     except Exception as e:

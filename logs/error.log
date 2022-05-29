@@ -63,3 +63,10 @@ See <[36mhttps://dvc.org/doc/install[39m> for more info.
 2022-05-28 09:56:47,114:logger:RESOURCE_DOES_NOT_EXIST: No Experiment with id=1 exists
 2022-05-28 20:27:37,996:logger:
 2022-05-28 20:44:14,550:logger:API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=120)"))
+2022-05-29 10:12:48,303:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:12:48,327:logger:'list' object has no attribute 'keys'
+2022-05-29 10:19:24,448:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:19:24,451:logger:'list' object has no attribute 'keys'
+2022-05-29 10:21:06,045:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:21:06,047:logger:'list' object has no attribute 'keys'
+2022-05-29 10:41:22,495:logger:name 'pred_plot' is not defined

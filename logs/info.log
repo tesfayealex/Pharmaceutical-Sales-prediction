@@ -1285,3 +1285,115 @@ Customers  0.316169   1.000000
 2022-05-28 20:25:13,859:logger:feature importnace plotted
 2022-05-28 20:27:37,996:logger:
 2022-05-28 20:44:14,550:logger:API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by ReadTimeoutError("HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=120)"))
+2022-05-29 10:11:37,307:logger:successfully got catagorical columns
+2022-05-29 10:11:37,387:logger:successfully got catagorical columns
+2022-05-29 10:11:37,389:logger:successfully got numerical columns
+2022-05-29 10:11:38,222:logger:RMSE Score: 728.5889324600898
+2022-05-29 10:11:38,224:logger:R2_Squared: 0.9490164716507211
+2022-05-29 10:11:38,225:logger:MAE Score: 446.8973
+2022-05-29 10:11:38,260:logger:Accuracy: 91.28 %.
+2022-05-29 10:11:38,837:logger:feature importnace plotted
+2022-05-29 10:12:02,066:logger:successfully got catagorical columns
+2022-05-29 10:12:02,069:logger:successfully got catagorical columns
+2022-05-29 10:12:02,071:logger:successfully got numerical columns
+2022-05-29 10:12:48,279:logger:RMSE Score: 744.6558282345835
+2022-05-29 10:12:48,281:logger:R2_Squared: 0.9475966776170743
+2022-05-29 10:12:48,283:logger:MAE Score: 452.0577818975469
+2022-05-29 10:12:48,294:logger:Accuracy: 91.46 %.
+2022-05-29 10:12:48,303:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:12:48,327:logger:'list' object has no attribute 'keys'
+2022-05-29 10:18:39,562:logger:successfully got catagorical columns
+2022-05-29 10:18:39,731:logger:successfully got catagorical columns
+2022-05-29 10:18:39,733:logger:successfully got numerical columns
+2022-05-29 10:18:41,862:logger:RMSE Score: 758.6055440455644
+2022-05-29 10:18:41,864:logger:R2_Squared: 0.9437957565934985
+2022-05-29 10:18:41,866:logger:MAE Score: 465.99429999999995
+2022-05-29 10:18:41,921:logger:Accuracy: 91.21 %.
+2022-05-29 10:18:42,640:logger:feature importnace plotted
+2022-05-29 10:18:44,239:logger:successfully got catagorical columns
+2022-05-29 10:18:44,244:logger:successfully got catagorical columns
+2022-05-29 10:18:44,247:logger:successfully got numerical columns
+2022-05-29 10:19:24,423:logger:RMSE Score: 733.8158176486494
+2022-05-29 10:19:24,424:logger:R2_Squared: 0.9475536202351089
+2022-05-29 10:19:24,425:logger:MAE Score: 444.7517975925926
+2022-05-29 10:19:24,438:logger:Accuracy: 91.42 %.
+2022-05-29 10:19:24,448:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:19:24,451:logger:'list' object has no attribute 'keys'
+2022-05-29 10:20:34,173:logger:successfully got catagorical columns
+2022-05-29 10:20:34,499:logger:successfully got catagorical columns
+2022-05-29 10:20:34,501:logger:successfully got numerical columns
+2022-05-29 10:20:35,369:logger:RMSE Score: 760.0999730934521
+2022-05-29 10:20:35,371:logger:R2_Squared: 0.9456668890122741
+2022-05-29 10:20:35,372:logger:MAE Score: 458.39029999999997
+2022-05-29 10:20:35,791:logger:Accuracy: 91.36 %.
+2022-05-29 10:20:42,636:logger:feature importnace plotted
+2022-05-29 10:20:50,527:logger:successfully got catagorical columns
+2022-05-29 10:20:50,529:logger:successfully got catagorical columns
+2022-05-29 10:20:50,535:logger:successfully got numerical columns
+2022-05-29 10:21:06,025:logger:RMSE Score: 797.1740033664754
+2022-05-29 10:21:06,026:logger:R2_Squared: 0.9407643387947843
+2022-05-29 10:21:06,028:logger:MAE Score: 464.0912333333333
+2022-05-29 10:21:06,038:logger:Accuracy: 91.07 %.
+2022-05-29 10:21:06,045:logger:'RandomizedSearchCV' object has no attribute 'feature_importances_'
+2022-05-29 10:21:06,047:logger:'list' object has no attribute 'keys'
+2022-05-29 10:23:38,389:logger:successfully got catagorical columns
+2022-05-29 10:23:38,433:logger:successfully got catagorical columns
+2022-05-29 10:23:38,436:logger:successfully got numerical columns
+2022-05-29 10:23:38,905:logger:RMSE Score: 749.8185364028642
+2022-05-29 10:23:38,906:logger:R2_Squared: 0.9484444035419184
+2022-05-29 10:23:38,910:logger:MAE Score: 466.75559999999996
+2022-05-29 10:23:38,918:logger:Accuracy: 91.2 %.
+2022-05-29 10:23:39,052:logger:feature importnace plotted
+2022-05-29 10:23:42,202:logger:successfully got catagorical columns
+2022-05-29 10:23:42,205:logger:successfully got catagorical columns
+2022-05-29 10:23:42,208:logger:successfully got numerical columns
+2022-05-29 10:23:54,669:logger:RMSE Score: 765.384597051269
+2022-05-29 10:23:54,671:logger:R2_Squared: 0.9435027322305989
+2022-05-29 10:23:54,672:logger:MAE Score: 458.7483
+2022-05-29 10:23:54,683:logger:Accuracy: 91.27 %.
+2022-05-29 10:23:54,867:logger:feature importnace plotted
+2022-05-29 10:24:59,390:logger:successfully got catagorical columns
+2022-05-29 10:24:59,451:logger:successfully got catagorical columns
+2022-05-29 10:24:59,453:logger:successfully got numerical columns
+2022-05-29 10:25:00,119:logger:RMSE Score: 737.8489767764132
+2022-05-29 10:25:00,121:logger:R2_Squared: 0.9458415894462795
+2022-05-29 10:25:00,123:logger:MAE Score: 451.46029999999996
+2022-05-29 10:25:00,259:logger:Accuracy: 91.38 %.
+2022-05-29 10:25:01,041:logger:feature importnace plotted
+2022-05-29 10:25:08,172:logger:successfully got catagorical columns
+2022-05-29 10:25:08,173:logger:successfully got catagorical columns
+2022-05-29 10:25:08,177:logger:successfully got numerical columns
+2022-05-29 10:25:44,386:logger:RMSE Score: 740.3565015292819
+2022-05-29 10:25:44,388:logger:R2_Squared: 0.9475548508276377
+2022-05-29 10:25:44,389:logger:MAE Score: 459.98708141173637
+2022-05-29 10:25:44,401:logger:Accuracy: 91.36 %.
+2022-05-29 10:25:44,582:logger:feature importnace plotted
+2022-05-29 10:28:20,748:logger:successfully got catagorical columns
+2022-05-29 10:28:20,879:logger:successfully got catagorical columns
+2022-05-29 10:28:20,883:logger:successfully got numerical columns
+2022-05-29 10:28:21,943:logger:RMSE Score: 691.4694433427023
+2022-05-29 10:28:21,946:logger:R2_Squared: 0.9527825874879773
+2022-05-29 10:28:21,948:logger:MAE Score: 445.7565
+2022-05-29 10:28:22,692:logger:Accuracy: 91.26 %.
+2022-05-29 10:28:24,593:logger:feature importnace plotted
+2022-05-29 10:28:36,160:logger:successfully got catagorical columns
+2022-05-29 10:28:36,161:logger:successfully got catagorical columns
+2022-05-29 10:28:36,165:logger:successfully got numerical columns
+2022-05-29 10:29:15,641:logger:RMSE Score: 730.5821443524792
+2022-05-29 10:29:15,641:logger:R2_Squared: 0.950510250364128
+2022-05-29 10:29:15,646:logger:MAE Score: 440.4843333333333
+2022-05-29 10:29:15,658:logger:Accuracy: 91.5 %.
+2022-05-29 10:29:15,901:logger:feature importnace plotted
+2022-05-29 10:39:40,062:logger:successfully got catagorical columns
+2022-05-29 10:39:41,888:logger:successfully got catagorical columns
+2022-05-29 10:39:41,889:logger:successfully got numerical columns
+2022-05-29 10:41:11,958:logger:RMSE Score: 871.71967146249
+2022-05-29 10:41:11,961:logger:R2_Squared: 0.9487250576770271
+2022-05-29 10:41:11,963:logger:MAE Score: 506.56733122953943
+2022-05-29 10:41:12,753:logger:Accuracy: 90.79 %.
+2022-05-29 10:41:22,495:logger:name 'pred_plot' is not defined
+2022-05-29 10:41:25,215:logger:successfully got catagorical columns
+2022-05-29 10:41:25,217:logger:successfully got catagorical columns
+2022-05-29 10:41:25,220:logger:successfully got numerical columns
+2022-05-29 11:12:32,518:logger:successfully got catagorical columns
+2022-05-29 11:12:32,533:logger:successfully got numerical columns
