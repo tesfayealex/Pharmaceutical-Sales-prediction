@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "main"
+      - "ml_modeling"
   pull_request:
     branches:
       - "main"
